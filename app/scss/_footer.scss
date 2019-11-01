@@ -13,69 +13,101 @@
 	//min-height: 150px;
 	line-height: 170%;
 	font-weight: 500;
-	color: black;
+	color: white;
 	z-index: 2;
-	background-color: white;
-	.map-container{
-		width: calc(50vw + 82px);
-		@media (max-width: 991px){
-			width: 100%;
-		}
-	}
-	@media (min-width: 992px) {
-		&:before{
-			content: "";
-			width: 45.5vw;
-			width: calc(50vw - 87px);
-			display: block;
-			height: 100px;
-			background-color: $color-gray-1;
-		}
-	}
+	background-color: $color-1;
 }
 
 .footer-content{
+	background-color: $color-1;
+	padding: 20px 0;
+	display: flex;
 	@media (max-width: 991px) {
+		align-items: center;
+		flex-direction: column;
 		padding-bottom: 30px;
 	}
+	h4{
+		font-family: $font-family-1;
+		font-weight: 400;
+	}
+	&>.m-v-30{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 }
+.footer-menu{
+	font-family: $font-family-1;
+	text-align: left;
+	display: flex;
+	@media (max-width: 991px) {
+		display: none;
+	}
 
-.footer-info{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	position: relative;
-	h2{
+	.item{
+		padding: 0 10px;
+		max-width: 160px;
+	}
+	.list{
+		min-height: 180px; 
+		//display: flex;
+		//flex-wrap: wrap;
+		//align-items: center;
+		max-width: 360px;
+		@extend .letter-none;
+		li{
+			line-height: 120%;
+			color: rgba(white, 0.5);
+			width: 100%;
+			font-size: em(12);
+			padding-right: 10px;
+			margin-bottom: 10px;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}
+.footer-feedback{
+	.btn-def{
+		background-color: white;
+		color: black;
 		font-weight: 600;
-		border-bottom: 1px solid black;
-		padding-bottom: 20px;
-		display: inline-block;
+		font-family: $font-family-2;
+		&:hover{
+			color: black;
+		}
+		a{
+			padding: 18px 35px;
+		}
 	}
-	.icon-content{
-		min-width: 60px;
-		font-size: 1.8em;
-	}
-	.mirror-icon{
-		position: absolute;
-		top: 50%;
-		font-size: 200px;
-		opacity: 0.1;
-		display: inline-block;
-		transform: rotate(30deg) translateY(-50%);
-		right: -30px;
-	}
-}
 
-.map-container{
-	height: 540px;
-	@media (max-width: 991px){
-		height: 210px;
+}
+.logo-content{
+	img{
+		display: inline-block;
+		vertical-align: top;
+		&:nth-child(1){	
+			width: 155px;
+			margin-right: 15px;
+		}
+		&:nth-child(2){	
+			width: 97px;	
+		}
+		@media (max-width: 991px) {
+			display: block;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 
 .copy-content{
 	font-size: 0.85em;
+	font-family: $font-family-1;
 	padding: 8px 0;
-	background-color: black;
+	background-color: $color-3;
 	color: white;
 	.row{
 		@media (min-width: 992px) {
@@ -84,8 +116,3 @@
 		}
 	}
 }
-.copyright{
-}
-.dev{
-}
-

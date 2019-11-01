@@ -5,8 +5,8 @@
 */
 
 $color-1: #005597 !default;
-$color-2: #002768 !default;
-$color-3: #409b24 !default;
+$color-2: #b89a53 !default;
+$color-3: #074778 !default;
 $color-4: #f15045 !default;
 $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
@@ -18,11 +18,11 @@ $font-family-3: sans-serif;
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray-1: #f5f5f5; //#bdbdbd
+$color-gray-1: #f9f9f9; //#bdbdbd
 $color-gray-2: #eeeeee;
 $color-gray-3: #c8c8c8;
-$color-gray-4: #666666;
-$color-gray-5: #333333;
+$color-gray-4: #7a7a7a;
+$color-gray-5: #666666;
 
 
 
@@ -581,8 +581,6 @@ table {
 	text-align: center;	
 	overflow: hidden;
 	font-family: $font-family-1;
-	font-weight: bold;
-	text-transform: uppercase;
 	&.text-wrap{
 		white-space: wrap;
 	}
@@ -658,6 +656,15 @@ table {
 			}
 		}
 	}
+	&.style-2{
+		background-color: $color-2;
+		&:hover{
+			color: white;
+		}
+	}
+	@media (max-width: 991px) {
+		background-color: $color-1;
+	}
 	&.icon-right{
 		span{
 			vertical-align: middle;
@@ -698,8 +705,8 @@ table {
 span.btn-opacity{
 	@extend .btn-style;
 	background-color: transparent;
-	border: 1px solid $color-1;
-	color: $color-1;
+	border: 1px solid $color-2;
+	color: $color-2;
 	transition: all 0.3s ease-in-out;
 
 	a{
@@ -708,14 +715,14 @@ span.btn-opacity{
 
 	&:hover{
 		color: white;
-		background-color: $color-1;
+		background-color: $color-2;
 	}
 	&.reverse{
 		border-color: white;
 		color: white;
 		&:hover{
-			border-color: $color-1;
-			color: $color-1;
+			border-color: $color-2;
+			color: $color-2;
 		}
 	}
 }
@@ -873,9 +880,11 @@ body{
 	overflow-x: hidden;
 	//color: white;
 	//height: auto;
-	//background-image: url('../img/bg/bg-body.jpg');
+	background-attachment: fixed;
+	background-image: url('../img/bg/bg-body.jpg');
 	background-color: white;
 	background-repeat: repeat-y;
+	background-size: cover;
 	//animation: bodyanime 900s linear infinite;
 	//background-position: center -100px;
 }
@@ -939,7 +948,7 @@ hr{
 input:focus, button:focus{
 	outline: transparent;
 }
-b{font-weight: 800;}
+b{font-weight: 600;}
 strong{font-weight: 700;}
 bolder{
 	font-weight: 900;
@@ -969,7 +978,7 @@ h1,h2,h3,h4,h5{
 	color: inherit;
 	line-height: 140%;
 	font-weight: 400;
-	font-family: $font-family-1;
+	font-family: $font-family-2;
 }
 
 h1, h2, h3, h4{
@@ -978,7 +987,7 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(36);
+	font-size: em(35);
 	margin-bottom: 15px;
 	line-height: 120%;
 	@media (max-width: 991px) {
@@ -1000,7 +1009,7 @@ h3{
 }
 h4{
 	font-weight: 600;
-	font-size: em(18);
+	font-size: em(16);
 }
 h5{	
 	line-height: 150%;
@@ -1109,6 +1118,7 @@ hr{
 	
 	p{
 		line-height: 180%;
+		color: $color-gray-5;
 		margin-bottom: 20px;
 		b{
 			color: black;
@@ -1164,7 +1174,7 @@ textarea.form-control-2{
 }
 .input-icon{
 	position: relative;
-	.fa{
+	.fa, .icm{
 		font-size: 18px;
 		position: absolute;
 		top: 50%;
