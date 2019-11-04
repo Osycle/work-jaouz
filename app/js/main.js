@@ -77,16 +77,16 @@
 			margin: 30
 		});
 
-		$(".certifications-items.owl-carousel").owlCarousel({
-			nav: true,
+		$(".short-journal-items.owl-carousel").owlCarousel({
+			nav: false,
 			//items: 3,
-			dots: false,
+			dots: true,
 			dotsEach: true,
 			autoplay: true,
 			touchDrag: checkSm(),
 			responsive:{
 				0:{items:1},
-				991:{items:3}
+				991:{items:4}
 			},
 			navText : owlBtn,
 			margin: 30
