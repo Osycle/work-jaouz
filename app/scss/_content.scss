@@ -736,3 +736,194 @@ figcaption{
 		@extend .shadow-def;
 	}
 }
+
+
+
+
+
+
+
+//cabinet header
+//
+.cabinet-header{
+	&#header{
+		position: fixed;
+	}
+	.wrapper{
+		width: 100%;
+	}
+	.header-logo{
+		img{
+			width: 190px;
+		}
+	}
+	.tab-item-wrapper{
+		max-width: 1000px;
+	}
+	.header-top-content{
+		height: 70px;
+	}
+	.left-block{
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-left: 15px;
+		@media (min-width: 992px) {
+			padding-right: 75px;
+		}
+		*{
+			vertical-align: middle;
+			line-height: 100%;
+		}
+	}
+}
+.header-outin-sign{
+	text-transform: uppercase;
+}
+.cabinet-page{
+	background-color: #f6f6f6;
+	.header-hidden{
+		display: block;
+		height: 70px;
+	}
+}
+//cabinet content
+.cabinet{
+	
+}
+.cabinet-left-bar{
+	position: fixed;
+	background-color: white;
+	width: 380px;
+	height: 90vh;
+	height: calc(100vh - 70px);
+	z-index: 2;
+	.user-name{
+		justify-content: center;
+		align-items: center;
+		//min-height: 20vh;
+		padding: 15px;
+		flex-direction: column;
+		display: flex;
+		small{
+			color: $color-gray-4;
+		}
+	}
+	.user-panel{
+		overflow-y: auto;
+		height: 70vh;
+		height: calc(100vh - 160px);
+		li{
+			a{
+				text-transform: uppercase;
+				transition: all 0.3s ease;
+				font-weight: 500;
+				i{
+					padding-right: 20px;
+					font-size: 2em;
+				}
+				display: block;
+				padding: 3vh 60px;
+			}
+			&:not(:last-child){
+				a{
+					border-bottom: 1px solid $color-gray-2;
+				}
+			}
+			&:hover{
+				a{
+					background-color: darken($color-1, 5%);
+					color: white;
+				}
+			}
+			&.active{
+				a{
+					background-color: $color-1;
+					color: white;
+				}
+			}
+
+		}
+	}
+}
+.cabinet{
+	min-height: calc(100vh - 160px);
+}
+.cabinet-content{
+	margin-left: 380px;
+	padding-left: 30px;
+	padding-right: 30px;
+	width: calc(100% - 380px);
+	.form-control{
+		border-color: $color-gray-3;
+		background-color: white;
+		height: 40px;
+	}
+	.select2-container{
+		border: 1px solid $color-gray-3;
+	}
+	.select2-container--default .select2-selection--single,
+	.select2-container--default .select2-selection--single .select2-selection__arrow{
+		background-color: white;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered,
+	.select2-container--default .select2-selection--single{
+		line-height: 40px;
+		height: 40px;
+	}
+	.input-content{
+		p em{
+			color: $color-gray-4;
+		}
+	}
+}
+.notify-def{
+	p{
+		display: inline-block;
+		padding: 10px 15px;
+		min-width: 300px;
+		font-weight: 500;
+		background-color: white;
+		border-left: 10px solid $color-1;
+		@extend .shadow-def;
+	}
+}
+.tab-main{
+	.tab-nav{
+		display: flex;
+		background-color: white;
+		justify-content: space-between;
+		.btn-def{
+			min-width: 190px;
+			background-color: $color-2;
+			a{
+				display: flex;
+				align-items: center;
+				height: 100%;
+			}
+		}
+	}
+	.tab-nav-list{
+		width: 100%;
+		display: flex;
+		li{
+			border-bottom: 5px solid transparent;
+			font-weight: 600;
+			a{
+				padding: 15px 20px;
+				padding: 15px 20px;
+				margin-top: 5px;
+				background-color: white;
+				display: block;
+			}
+			&.active{
+				color: $color-2;
+				border-color: $color-2;
+			}
+			&:not(:last-child){
+				border-right: 1px solid $color-gray-2;
+			}
+		}
+	}
+
+}

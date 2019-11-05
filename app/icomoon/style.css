@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6gxl92');
-  src:  url('fonts/icomoon.eot?6gxl92#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?6gxl92') format('truetype'),
-    url('fonts/icomoon.woff?6gxl92') format('woff'),
-    url('fonts/icomoon.svg?6gxl92#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?h6w3q3');
+  src:  url('fonts/icomoon.eot?h6w3q3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?h6w3q3') format('truetype'),
+    url('fonts/icomoon.woff?h6w3q3') format('woff'),
+    url('fonts/icomoon.svg?h6w3q3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icm-logout:before {
+  content: "\e909";
+}
+.icm-man-user:before {
+  content: "\e90a";
+}
+.icm-pencil:before {
+  content: "\e90b";
+}
+.icm-play-button:before {
+  content: "\e90c";
+}
+.icm-view-eye-interface-symbol:before {
+  content: "\e90d";
+}
+.icm-add-button-inside-black-circle:before {
+  content: "\e90e";
+}
+.icm-clipboard:before {
+  content: "\e90f";
+}
+.icm-correct-symbol:before {
+  content: "\e910";
+}
+.icm-file-in-folder:before {
+  content: "\e911";
+}
+.icm-info:before {
+  content: "\e912";
+}
 .icm-instagram:before {
   content: "\e900";
 }
@@ -43,7 +73,7 @@
 .icm-acrobat:before {
   content: "\e905";
 }
-.icm-correct-symbol:before {
+.icm-correct-symbol1:before {
   content: "\e906";
 }
 .icm-envelope:before {
