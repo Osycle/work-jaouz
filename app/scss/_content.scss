@@ -757,9 +757,6 @@ figcaption{
 			width: 190px;
 		}
 	}
-	.tab-item-wrapper{
-		max-width: 1000px;
-	}
 	.header-top-content{
 		height: 70px;
 	}
@@ -789,7 +786,37 @@ figcaption{
 }
 //cabinet content
 .cabinet{
-	
+	min-height: calc(100vh - 160px);
+	.tab-content{
+		max-width: 850px;
+	}
+	.drop-file{
+		border: 2px dashed $color-gray-3;
+		text-align: right;
+		line-height: 0;
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&.dragenter{
+			border-color: $color-1;
+		}
+		em{
+			color: $color-gray-4;
+			padding: 5px 15px;
+		}
+		.btn-def{
+			height: 100%;
+		}
+		input{
+			//display: none;
+			height: auto;
+			text-align: right;
+			background-color: transparent;
+			padding: 10px;
+			border: 2px dashed $color-gray-3;
+		}
+	}
 }
 .cabinet-left-bar{
 	position: fixed;
@@ -845,9 +872,6 @@ figcaption{
 
 		}
 	}
-}
-.cabinet{
-	min-height: calc(100vh - 160px);
 }
 .cabinet-content{
 	margin-left: 380px;

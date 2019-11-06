@@ -251,8 +251,33 @@
 			]
 		}, {});
 
-
-
+		$("*").on("dragenter dragover dragleave drop", function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		})
+		$(".drop-file").on("dragenter dragleave drop", function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var that = $(this);
+			var eType = e.type;
+			function drop(e){
+				var files = e.originalEvent.dataTransfer.files;
+				var uploadFormData = new FormData($("#form-upload")[0]);
+				console.log(files, uploadFormData);
+				//that.find("input").val(uploadFormData);
+			}
+			switch(eType){
+				case "dragenter":
+					that.addClass("dragenter");break;	
+				case "dragleave":
+					that.removeClass("dragenter");break;	
+				case "drop":
+					drop(e);break;
+			}
+				
+			console.log(eType);
+			return false;
+		})
 
 
 
