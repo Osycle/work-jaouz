@@ -120,7 +120,36 @@
 			
 		}
 		
+		$(".bnr-carousel-items.owl-carousel").owlCarousel({
+			nav: false,
+			loop: true,
+			//items: 3,
+			dots: true,
+			dotsEach: false,
+			autoplay: true,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:1}
+			},
+			navText : owlBtn,
+			margin: 0
+		});
 
+		$(".short-album-items.owl-carousel").owlCarousel({
+			nav: false,
+			//items: 3,
+			dots: true,
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:4}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
 
 		/*FANCYBOX*/
 		if ($("[data-fancybox]").length != 0)
@@ -264,7 +293,7 @@
 				var files = e.originalEvent.dataTransfer.files;
 				var uploadFormData = new FormData($("#form-upload")[0]);
 				console.log(files, uploadFormData);
-				//that.find("input").val(uploadFormData);
+				that.find("input").val(uploadFormData);
 			}
 			switch(eType){
 				case "dragenter":
